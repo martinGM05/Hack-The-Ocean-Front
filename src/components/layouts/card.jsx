@@ -25,9 +25,9 @@ const Card = ({data}) => {
                 </p>
 
                 <footer class="card-footer">
-                    <a href="#" class="card-footer-item">{data.estado[0]}</a>
-                    <a href="#" class="card-footer-item">{data.tipo[0]}</a>
-                    <a href="#" class="card-footer-item">{data.habitad[0]}</a>
+                    <a href="#" class="card-footer-item">{data.estado[0].nombre}</a>
+                    <a href="#" class="card-footer-item">{data.tipo[0].nombre}</a>
+                    <a href="#" class="card-footer-item">{data.habitad[0].nombre}</a>
                 </footer>
                 </div>
         </div>
