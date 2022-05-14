@@ -35,7 +35,7 @@ const Buscador = ({ setModal }) => {
 
 
     return (
-        <div className="container mx-auto columns is-multiline box">
+        <div className="container mx-auto columns is-multiline box ">
             <div className="column is-flex is-flex-direction-row">
                 <div className="select is-primary mx-2">
                     <select onChange={handleSelect}>
