@@ -20,6 +20,7 @@ const EspeciesProvider = ({ children }) => {
     const obtenerEspecies = async (desde=0,limite=6) => {
         try {
             const resultado = await axios.get(`/especie?desde=${desde}&limite=${limite}`);
+
             dispatch({
                 type: "OBTENER_ESPECIES",
                 payload: {
