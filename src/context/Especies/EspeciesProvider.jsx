@@ -13,10 +13,10 @@ const EspeciesProvider = ({ children }) => {
 
     const [state, dispatch] = useReducer(EspeciesReducer, initalState)
 
-
     const obtenerEspecies = async (desde=0,limite=6) => {
         try {
             const resultado = await axios.get(`/especie?desde=${desde}&limite=${limite}`);
+
             dispatch({
                 type: "OBTENER_ESPECIES",
                 payload: {
@@ -30,6 +30,8 @@ const EspeciesProvider = ({ children }) => {
         }
         
     }
+
+    
 
     return (
         <EspeciesContext.Provider

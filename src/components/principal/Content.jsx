@@ -8,9 +8,17 @@ const Content = () => {
     const {especies,total, obtenerEspecies} = useContext(EspeciesContext);
     const [pagina,setPagina] = useState(1);
 
+    const getEspecies = ()=>{
+        obtenerEspecies(pagina*6);
+    }
+
     useEffect(() => {
         obtenerEspecies();
     }, [])
+
+    if(!especies.length){
+        return <p className="has-text-centered">No se encontraron especies</p>
+    }
 
     return ( 
         <>
@@ -28,9 +36,29 @@ const Content = () => {
             
         </div>
 
-        <nav class="container mx-auto my-5 pagination is-centered" role="navigation" aria-label="pagination">
-            <a class="pagination-previous">Anterior</a>
-            <a class="pagination-next">Siguiente</a>
+        <nav className="container mx-auto my-5 pagination is-centered" role="navigation" aria-label="pagination">
+            {
+                pagina != 1 ?
+                <button 
+                onClick={() =>{ 
+                    setPagina(pagina - 1)
+                    getEspecies()
+                }}
+            className="pagination-previous">Anterior</button>
+                : null
+            }
+           
+            {
+                pagina*6 < total ?
+                <button
+                onClick={() => {
+                    setPagina(pagina + 1)
+                    getEspecies()
+                }}
+                className="pagination-next">Siguiente</button>
+                : null
+
+            }
         </nav>
 
         </>
