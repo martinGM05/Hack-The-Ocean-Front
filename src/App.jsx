@@ -1,9 +1,12 @@
+
 import React from 'react';
+import Buscador from './components/principal/buscador';
+
+
 const App = () => {
 
   return (
-    <div>Hello World
-    </div>
+    <Buscador />
   )
 }
 
