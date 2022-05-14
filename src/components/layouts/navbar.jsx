@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const Navbar = () => {
     return (
         <nav class="navbar mb-2 is-primary" role="navigation" aria-label="main navigation">
@@ -18,9 +20,9 @@ const Navbar = () => {
             <div class="navbar-end">
             <div class="navbar-item">
                 <div class="buttons">
-                <a class="button is-danger">
+                <Link to='/reporte' className='button is-danger'>
                     <strong>Quiero Reportar un animal</strong>
-                </a>
+                </Link>
                 </div>
             </div>
             </div>
