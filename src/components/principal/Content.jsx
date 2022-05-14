@@ -28,9 +28,9 @@ const Content = () => {
             
         </div>
 
-        <nav class="container mx-auto my-5 pagination is-centered" role="navigation" aria-label="pagination">
-            <a class="pagination-previous">Anterior</a>
-            <a class="pagination-next">Siguiente</a>
+        <nav className="container mx-auto my-5 pagination is-centered" role="navigation" aria-label="pagination">
+            <a className="pagination-previous">Anterior</a>
+            <a className="pagination-next">Siguiente</a>
         </nav>
 
         </>

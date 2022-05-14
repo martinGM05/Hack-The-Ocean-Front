@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import axios from "axios";
-=======
->>>>>>> 785c359816e350aa396f285152ade9105449353b
 import { useState, useEffect, useReducer, createContext } from "react";
 import EspeciesReducer from "./EspeciesReducer";
 import axios from '../../config/axios';
@@ -15,8 +11,11 @@ const EspeciesProvider = ({ children }) => {
         total: 0
     }
 
-    const [state, dispatch] = useReducer(EspeciesReducer, initalState)
 
+    const [state, dispatch] = useReducer(EspeciesReducer, initalState)
+    const [stateEstados, setStateEstados] = useReducer(EspeciesReducer, initalState)
+    const [stateTipos, setStateTipos] = useReducer(EspeciesReducer, initalState)
+    const [stateHabitats, setStateHabitats] = useReducer(EspeciesReducer, initalState)
 
     const obtenerEspecies = async (desde=0,limite=6) => {
         try {
@@ -35,12 +34,71 @@ const EspeciesProvider = ({ children }) => {
         
     }
 
+    const obtenerEstados = async (desde=0, limite=6) => {
+        try {
+            const resultado = await axios.get(`/estado?desde=${desde}&limite=${limite}`);
+            setStateEstados({
+                type: "OBTENER_ESTADOS",
+                payload: {
+                    total: resultado.data.total,
+                    estados: resultado.data.estados
+                }
+            })
+
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    const obtenerTipos = async (desde=0, limite=6) => {
+        try {
+            const resultado = await axios.get(`/tipos?desde=${desde}&limite=${limite}`);
+            setStateTipos({
+                type: "OBTENER_TIPOS",
+                payload: {
+                    total: resultado.data.total,
+                    tipos: resultado.data.tipos
+                }
+            })
+
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    const obtenerHabitats = async (desde=0, limite=6) => {
+        try {
+            const resultado = await axios.get(`/habitad?desde=${desde}&limite=${limite}`);
+            setStateHabitats({
+                type: "OBTENER_HABITATS",
+                payload: {
+                    total: resultado.data.total,
+                    habitats: resultado.data.habitads
+                }
+            })
+
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+
+
     return (
         <EspeciesContext.Provider
             value={{
                 total: state.total,
                 especies: state.especies,
-                obtenerEspecies
+                obtenerEspecies,
+                obtenerEstados,
+                estados: stateEstados.estados,
+                totalEspecies: stateEstados.total,
+                obtenerTipos,
+                tipos: stateTipos.tipos,
+                totalTipos: stateTipos.total,
+                obtenerHabitats,
+                habitats: stateHabitats.habitats,
+                totalHabitats: stateHabitats.total
             }}
         >
             {children}
