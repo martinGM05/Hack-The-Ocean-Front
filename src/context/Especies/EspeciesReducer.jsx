@@ -6,7 +6,7 @@ export default (state, action) => {
                 especies: action.payload.especies,
                 total: action.payload.total
             }
-            
+        
         default:
             return state;
     }
