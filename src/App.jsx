@@ -1,9 +1,9 @@
 import React from 'react';
+import Content from './components/panel/Content';
 const App = () => {
 
   return (
-    <div>Hello World
-    </div>
+    <Content/>
   )
 }
 
