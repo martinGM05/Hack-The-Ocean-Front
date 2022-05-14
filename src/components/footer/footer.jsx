@@ -8,7 +8,7 @@ const Footer = () => {
             <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
             is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
           </p>
-          <img src="./../../img/Wooper.jpeg" alt="" width="100" height="100" />
+          <img src="./../../../Assets/images/Wooper.jpeg" alt="" width="100" height="100" />
         </div>
       </footer>
      );
