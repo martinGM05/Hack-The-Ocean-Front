@@ -1,20 +1,31 @@
 
 const Buscador = () => {
     return (
-        <div class="columns is-multiline box">
-            <div class="column is-flex is-flex-direction-row">
-                <div class="select is-primary">
+        <div className="container mx-auto columns is-multiline box">
+            <div className="column is-flex is-flex-direction-row">
+                <div className="select is-primary mx-2">
                     <select>
-                        <option>Especie</option>
+                        <option>Todos</option>
                         <option>Estado</option>
                         <option>Tipo</option>
                         <option>Habitat</option>
                     </select>
                 </div>
+                <div className="select is-primary mx-2">
+                    <select>                        
+                        <option selected>Todos</option>
+                    </select>
+                </div>
             </div>
-            <div class="column is-flex">
-                    <input class="input" type="text" placeholder="" />
-                    <button class="button is-dark">Buscar</button>
+            <div className="field has-addons mx-2 my-2">
+                <div className="control">
+                <input className="input" type="text" placeholder="Buscar..."/>
+                </div>
+                <div className="control">
+                <a className="button is-primary">
+                Buscar
+                </a>
+                </div>
             </div>
         </div>
     );
