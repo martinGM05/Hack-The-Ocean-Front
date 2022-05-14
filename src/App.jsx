@@ -1,12 +1,10 @@
 
 import React from 'react';
-import Buscador from './components/principal/buscador';
-
-
+import Content from './components/panel/Content';
 const App = () => {
 
   return (
-    <Buscador />
+    <Content/>
   )
 }
 

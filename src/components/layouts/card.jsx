@@ -1,27 +1,34 @@
-const Card = () => {
+const Card = ({data}) => {
 
     return ( 
+        
         <div className="card">
-            <div className="card-image">
-                <figure className="image is-4by3">
-                <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image"/>
-                </figure>
-            </div>
+            <span class={`is-pulled-right tag is-${data.problematica == 3 ? 'danger' : data.problematica == 2 ? 'warning' : 'warning is-light'}`}>
+                Problematica nivel: {data.problematica}
+            </span>
             <div className="card-content">
                 <div className="media">
-
-                <div className="media-content">
-                    <p className="title is-4">John Smith</p>
-                    <p className="subtitle is-6">@johnsmith</p>
+                    
+                    <div className="media-left">
+                    <figure class="image is-128x128">
+                        <img class="" src={data.img}/>
+                    </figure>
+                    </div>
+                <div className="media-right my-5">
+                    <p className="title is-4">{data.nombre}</p>
                 </div>
                 </div>
 
                 <div className="content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-                <a href="#">#css</a> <a href="#">#responsive</a>
-                <br/>
-                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                <p>
+                    {data.descripcion}
+                </p>
+
+                <footer class="card-footer">
+                    <a href="#" class="card-footer-item">{data.estado[0]}</a>
+                    <a href="#" class="card-footer-item">{data.tipo[0]}</a>
+                    <a href="#" class="card-footer-item">{data.habitad[0]}</a>
+                </footer>
                 </div>
         </div>
         </div>
