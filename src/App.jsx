@@ -1,14 +1,19 @@
-
-import React from 'react';
+import { useState } from 'react';
 import Content from './components/panel/Content';
 import Modal from './components/layouts/modal';
+import Page from './components/principal/Page';
 
 const App = () => {
+
+  const [modal, setModal] = useState(false);
 
   return (
     <>
       <Content/>
-      <Modal />
+      <button className='openModalBtn' 
+        onClick={() => setModal(true)}
+      >Open Modal</button>
+      {modal && <Modal closeModal={setModal}/>}
     </>
   )
 }
