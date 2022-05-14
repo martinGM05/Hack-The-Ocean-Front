@@ -1,5 +1,7 @@
 
-const Buscador = () => {
+const Buscador = ({setModal}) => {
+
+
     return (
         <div className="container mx-auto columns is-multiline box">
             <div className="column is-flex is-flex-direction-row">
@@ -22,9 +24,11 @@ const Buscador = () => {
                 <input className="input" type="text" placeholder="Buscar..."/>
                 </div>
                 <div className="control">
-                <a className="button is-primary">
+                <button className="button is-primary"
+                    onClick={() => setModal(true)}
+                >
                 Buscar
-                </a>
+                </button>
                 </div>
             </div>
         </div>

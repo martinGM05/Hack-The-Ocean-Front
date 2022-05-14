@@ -7,7 +7,9 @@ import Footer from '../footer/footer';
 const Page = () => {
     return ( 
         <>
-            <NavBar/>
+            <div className='pb-5'>
+                <NavBar />
+            </div>
             <Buscador/>
             <Content/>
             <Footer/>
