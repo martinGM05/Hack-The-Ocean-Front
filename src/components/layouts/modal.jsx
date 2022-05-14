@@ -1,25 +1,34 @@
-const Modal = ({ closeModal }) => {
+
+const Modal = ({ closeModal, nombre, image, description }) => {
     return (
-        <>
-            <p>Modal</p>
-            <div className="modalBackground">
-                <div className="modalContainer">
-                    <button
+        <div>
+            <div className="modal-background"></div>
+            <div className="modal-card">
+                <header className="modal-card-head">
+                    <p className="modal-card-title">{nombre}</p>
+                    <button className="delete" aria-label="close"
                         onClick={() => closeModal(false)}
                     >X</button>
-                    <div className="title">
-                        <h1>Titulo</h1>
+                </header>
+                <section className="modal-card-body">
+                    <div className="columns is-multiline">
+                        <p className="column is-flex">
+                            <img src={image} alt={nombre} />
+                            <div className="column is-flex is-flex-direction-row">
+                                <p className="is-flex"> 
+                                    {description}
+                                </p>
+                            </div>
+                        </p>
                     </div>
-                    <div className="body">
-                        <h1>Contenido</h1>
-                    </div>
-                    <div className="footer">
-                        <button>Aceptar</button>
-                        <button>Cancelar</button>
-                    </div>
-                </div>
+                </section>
+                <footer className="modal-card-foot">
+                    <button className="button"
+                        onClick={() => closeModal(false)}
+                    >Salir</button>
+                </footer>
             </div>
-        </>
+        </div>
     );
 }
 
