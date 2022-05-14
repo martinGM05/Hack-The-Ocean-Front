@@ -1,6 +1,6 @@
 const Navbar = () => {
     return (
-        <nav class="navbar is-fixed-top is-primary" role="navigation" aria-label="main navigation">
+        <nav class="navbar mb-2 is-primary" role="navigation" aria-label="main navigation">
         <div class="navbar-brand ">
             <a class="navbar-item" href="#">
             Salvemos Especies En Peligro
@@ -18,8 +18,8 @@ const Navbar = () => {
             <div class="navbar-end">
             <div class="navbar-item">
                 <div class="buttons">
-                <a class="button is-primary">
-                    <strong>Registro</strong>
+                <a class="button is-danger">
+                    <strong>Quiero Reportar un animal</strong>
                 </a>
                 </div>
             </div>
