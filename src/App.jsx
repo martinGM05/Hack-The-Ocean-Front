@@ -1,9 +1,10 @@
 import React from 'react';
-import Content from './components/panel/Content';
+import Page from './components/principal/Page';
+
 const App = () => {
 
   return (
-    <Content/>
+    <Page/>
   )
 }
 
