@@ -1,0 +1,9 @@
+.contenedorImagen{
+    background: #000;
+    height: 500px;
+}
+
+.img-full{
+    width: 100%;
+    height: 100%;
+}
