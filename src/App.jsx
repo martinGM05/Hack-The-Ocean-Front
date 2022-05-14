@@ -1,14 +1,15 @@
-import { useState } from 'react';
 import Page from './components/principal/Page';
+import {Route,Routes, BrowserRouter} from 'react-router-dom';
 
 const App = () => {
 
-  const [modal, setModal] = useState(false);
 
   return (
-    <>
-      <Page/>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Page/>} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
