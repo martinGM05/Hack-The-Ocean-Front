@@ -1,1 +1,0 @@
-export const OBTENER_ESPECIES = 'OBTENER_ESPECIES';
