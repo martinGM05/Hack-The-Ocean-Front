@@ -1,40 +1,37 @@
-import { useState } from 'react';
-import Modal from '../layouts/modal';
 
-const Buscador = () => {
+const Buscador = ({setModal}) => {
 
-    const [modal, setModal] = useState(false);
 
     return (
-        <>
-            <div className="columns is-multiline box">
-                <div className="column is-flex is-flex-direction-row">
-                    <div className="select is-primary">
-                        <select>
-                            <option>Especie</option>
-                            <option>Estado</option>
-                            <option>Tipo</option>
-                            <option>Habitat</option>
-                        </select>
-                    </div>
+        <div className="container mx-auto columns is-multiline box">
+            <div className="column is-flex is-flex-direction-row">
+                <div className="select is-primary mx-2">
+                    <select>
+                        <option>Todos</option>
+                        <option>Estado</option>
+                        <option>Tipo</option>
+                        <option>Habitat</option>
+                    </select>
                 </div>
-                <div className="column is-flex">
-                    <input className="input" type="text" placeholder="" />
-                    <button className="button is-dark"
-                        onClick={() => setModal(true)}
-                    >Buscar</button>
+                <div className="select is-primary mx-2">
+                    <select>                        
+                        <option selected>Todos</option>
+                    </select>
                 </div>
             </div>
-
-            {modal &&
-                <Modal
-                    closeModal={setModal}
-                    nombre={'Ajolote'}
-                    image={'https://bulma.io/images/placeholders/128x128.png'}
-                    description={'Irure deserunt occaecat enim dolore quis. Qui do irure excepteur quis aliquip laborum velit commodo cupidatat eu qui eiusmod enim.'}
-                />
-            }
-        </>
+            <div className="field has-addons mx-2 my-2">
+                <div className="control">
+                <input className="input" type="text" placeholder="Buscar..."/>
+                </div>
+                <div className="control">
+                <button className="button is-primary"
+                    onClick={() => setModal(true)}
+                >
+                Buscar
+                </button>
+                </div>
+            </div>
+        </div>
     );
 }
 
