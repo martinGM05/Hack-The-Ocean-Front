@@ -1,7 +1,8 @@
 import axios from "axios";
 
 const clienteAxios = axios.create({
-    baseURL: 'https://hacktheocean.herokuapp.com/api/'
+    baseURL: 'https://hacktheoceanback.azurewebsites.net/api/',
+
     // baseURL: 'http://localhost:4000/api/'
 })
 
