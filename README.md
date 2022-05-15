@@ -29,7 +29,7 @@ A través de nuestra aplicación podrás visualizar las distintas especies junto
  
 ```mermaid
 flowchart TB
-id1-->id2 & id7-->id3-->id5-->id4--Necesita ayuda-->id6-->id8-- ¿Qué puedo hacer? -->id1
+id1-->id2 & id7-->id3-->id5-->id4--Necesita ayuda-->id6-->id8--|¿Qué puedo hacer?|-->id1
 id4--No se encuentra en problemas-->id1
 id8--Nuestra colaboración-->id9
  
