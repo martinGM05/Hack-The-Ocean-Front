@@ -29,14 +29,14 @@ A través de nuestra aplicación podrás visualizar las distintas especies junto
  
 ```mermaid
 flowchart TB
-id1-->id2 & id7-->id3-->id5-->id4--Necesita ayuda-->id6-->id8--Que puedo hacer?-->id1
+id1-->id2 & id7-->id3-->id5-->id4--Necesita ayuda-->id6-->id8--¿Qué puedo hacer?-->id1
 id4--No se encuentra en problemas-->id1
 id8--Nuestra colaboración-->id9
  
 id1(Conoce a las especies)
-id2([Donde se encuentran])
+id2([¿Dónde se encuentran?])
 id3((Encontré una de ellas))
-id4{Se encuentran en problemas?}
+id4{¿Se encuentran en problemas?}
 id5{{Hago una aportación}}
 id6[(Almacenamos los datos para verificarlos)]
 id7([Averigua sobre su situación])
@@ -50,7 +50,7 @@ id9(Notificaremos a las autoridades y grupos de proteccion y preservacion de la 
 
 ## Cómo funciona el proyecto
  
-### Cómo navego?
+### ¿Cómo navego?
 ```mermaid
 flowchart TB
 id1-->id6-->id2-->id3--Filtros-->id4--A través de un reporte-->id7
@@ -59,7 +59,7 @@ id4-->id6
 id1(Mira la página)
 id2(Aprendes)
 id6(Está creciendo)
-id3(Qué te interesa?)
+id3(¿Qué te interesa?)
 id4(Aportas)
 id7(Una Api de las especies)
 ```
