@@ -59,7 +59,7 @@ id4-->id6
 id1(Mira la página)
 id2(Aprendes)
 id6(Está creciendo)
-id3(¿Qué te interesa?)
+id3(Qué te interesa?)
 id4(Aportas)
 id7(Una Api de las especies)
 ```
