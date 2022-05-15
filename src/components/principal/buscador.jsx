@@ -8,6 +8,7 @@ const Buscador = ({ setModal }) => {
         estados, totalEspecies, obtenerEstados,
         tipos, totalTipos, obtenerTipos,
         habitats, totalHabitats, obtenerHabitats,
+        filtrarEspecies
     } = useContext(EspeciesContext);
 
     const [pagina, setPagina] = useState(1);
@@ -32,6 +33,11 @@ const Buscador = ({ setModal }) => {
         }
     }
 
+    const handleFiltrar = (e) => {
+        alert(e.target.value)
+        filtrarEspecies(e.target.value);
+    }
+
 
 
     return (
@@ -48,7 +54,7 @@ const Buscador = ({ setModal }) => {
                 {
                     tipoLista.length > 0 && (
                         <div className="select is-primary mx-2">
-                            <select>
+                            <select onChange={(e) => handleFiltrar(e)}>
                                 {
                                     tipoLista.map(estado => (
                                         <option key={estado._id} value={estado.nombre}>{estado.nombre}</option>

@@ -22,7 +22,7 @@ const Navbar = () => {
                 </div>
                 <div id="navbarMenuHeroA" className="navbar-menu">
                     <div className="navbar-end">
-                        <Link to={'/'} className={`navbar-item`}>
+                        <Link to={'/'} className={`navbar-item ${location.pathname === '/' ? 'is-active' : ''}`}>
                             Inicio
                         </Link>
                         <span className={`navbar-item ${location.pathname === '/reporte' ? 'is-active' : ''}`} href="/contacto">

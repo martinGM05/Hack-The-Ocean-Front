@@ -25,6 +25,12 @@ export default (state, action) => {
                 habitats: action.payload.habitats,
                 total: action.payload.total
             }
+        case 'FILTRAR_ESPECIES':
+            return {
+                ...state,
+                especies: action.payload.especies,
+                total: action.payload.total
+            }
         default:
             return state;
     }

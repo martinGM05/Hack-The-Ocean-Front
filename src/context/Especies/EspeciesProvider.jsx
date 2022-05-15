@@ -16,6 +16,7 @@ const EspeciesProvider = ({ children }) => {
     const [stateEstados, setStateEstados] = useReducer(EspeciesReducer, initalState)
     const [stateTipos, setStateTipos] = useReducer(EspeciesReducer, initalState)
     const [stateHabitats, setStateHabitats] = useReducer(EspeciesReducer, initalState)
+    
 
     const obtenerEspecies = async (desde=0,limite=6) => {
         try {
@@ -32,7 +33,24 @@ const EspeciesProvider = ({ children }) => {
         } catch (error) {
             console.log(error);
         }
-        
+    }
+
+    const filtrarEspecies = async (estadoParam) => {
+        try {
+            const { data } = await axios.get(`/especie?desde=0&limite=100000`);
+            const especiesFiltradas = data.especies.filter(especie => especie.estado.map(estado => estado.nombre).includes(estadoParam))
+            // console.log('Estado original', state);
+            // console.log('Estado filtrado', result);
+            dispatch({
+                type: "FILTRAR_ESPECIES",
+                payload: {
+                    especies: especiesFiltradas,
+                    total: especiesFiltradas.length
+                }
+            })
+        } catch (error) {
+            console.log(error);
+        }
     }
 
     const obtenerEstados = async (desde=0, limite=6) => {
@@ -99,7 +117,8 @@ const EspeciesProvider = ({ children }) => {
                 totalTipos: stateTipos.total,
                 obtenerHabitats,
                 habitats: stateHabitats.habitats,
-                totalHabitats: stateHabitats.total
+                totalHabitats: stateHabitats.total,
+                filtrarEspecies
             }}
         >
             {children}

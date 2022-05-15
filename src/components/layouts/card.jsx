@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 
 const Card = ({data}) => {
 
-    console.log(data);
+    // console.log(data);
 
     return ( 
         
