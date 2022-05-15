@@ -65,7 +65,7 @@ id7(Una Api de las especies)
 ```
  
 ## Instrucciones para uso
-Si el proyecto está desplegado basta con ir al link [Wooper al rescate](https://hacktheocean.azurewebsites.net/)
+Como el proyecto está desplegado, basta con ir al link [Wooper al rescate](https://calm-glacier-02bd19710.1.azurestaticapps.net)
  
 Para instalar las dependencias con el repositorio solo corre el comando:
 >npm install
