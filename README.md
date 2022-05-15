@@ -5,7 +5,7 @@ Hack the Ocean es un hackathon con la iniciativa de implementar tecnologías de 
  
 ## Woopas al Rescate
 Este proyecto apunta a crear consciencia de las distintas especies con las que habitamos en el planeta, la situación en la que se encuentran debido al cambio climático, afectación de su hábitat, pérdida de sus fuentes de alimento y la constante expansión del territorio humano.
-Puedes vizualizar el proyecto aqui [Wooper al rescate](https://hacktheocean.azurewebsites.net/)
+Puedes vizualizar el proyecto aqui [Wooper al rescate](https://calm-glacier-02bd19710.1.azurestaticapps.net)
  
 ### Tecnologías utilizadas en el proyecto
  
@@ -20,7 +20,11 @@ Vite.js es una herramienta de desarrollo rápido para proyectos web modernos. Se
 **Bulma CSS**
  
 Bulma es un framework gratuito de código abierto que proporciona componentes frontend listos para usar que se pueden combinar fácilmente para crear interfaces web receptivas.
- 
+
+**ESLint**
+
+Herramienta de código abierto enfocada en el proceso de "lintig" para JavaScript, siendo la más predominante para la tarea de "limpiar" código JavaScript tanto en el servidor (NodeJS) como en el navegador.
+
 A través de nuestra aplicación podrás visualizar las distintas especies junto con información sobre ellas y podrás filtrar por los distintos parámetros:
  
 ```mermaid
@@ -61,7 +65,7 @@ id7(Una Api de las especies)
 ```
  
 ## Instrucciones para uso
-Si el proyecto está desplegado basta con ir al link [Wooper al rescate](https://hacktheocean.azurewebsites.net/)
+Como el proyecto está desplegado, basta con ir al link [Wooper al rescate](https://calm-glacier-02bd19710.1.azurestaticapps.net)
  
 Para instalar las dependencias con el repositorio solo corre el comando:
 >npm install
