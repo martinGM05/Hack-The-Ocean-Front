@@ -79,7 +79,8 @@ El backend el cual se conecta con la página se encuentra en este [repositorio](
 Listo, ahora puedes dirigirte a la dirección local para ver el proyecto.
 
 # Demo
-![DEMO-Front](https://user-images.githubusercontent.com/63875704/168490887-948130f2-4879-431d-ad5f-51596a4fa24b.gif)
+ ![DEMO-Front](https://user-images.githubusercontent.com/63875704/168492193-90240644-4312-417f-b224-2e8fedf4c1cd.gif)
+
 
 
 
