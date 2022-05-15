@@ -34,7 +34,7 @@ id4--No se encuentra en problemas-->id1
 id8--Nuestra colaboración-->id9
  
 id1(Conoce a las especies)
-id2([Donde se encuentran])
+id2([Dónde se encuentran])
 id3((Encontré una de ellas))
 id4{Se encuentran en problemas?}
 id5{{Hago una aportación}}
