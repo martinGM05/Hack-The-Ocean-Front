@@ -37,9 +37,9 @@ const Card = ({data}) => {
                 </p>
 
                 <footer className="card-footer">
-                    {/* <a href="#" className="card-footer-item">{data.estado[0].nombre}</a>
+                    <a href="#" className="card-footer-item">{data.estado[0].nombre}</a>
                     <a href="#" className="card-footer-item">{data.tipo[0].nombre}</a>
-                    <a href="#" className="card-footer-item">{data.habitad[0].nombre}</a> */}
+                    <a href="#" className="card-footer-item">{data.habitad[0].nombre}</a>
                 </footer>
                 </div>
         </div>

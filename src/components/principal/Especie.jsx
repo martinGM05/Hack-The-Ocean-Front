@@ -15,6 +15,7 @@ const Especie = () => {
         const obtenerEspecie = async () => {
             const resultado = await axios.get(`/especie/${id}`);
             setEspecie(resultado.data);
+
         }
         obtenerEspecie();
 
@@ -51,6 +52,7 @@ const Especie = () => {
                     </div>
             </div>
             </div>
+
         </div>
         </>
 
