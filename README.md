@@ -22,6 +22,7 @@ Vite.js es una herramienta de desarrollo rápido para proyectos web modernos. Se
 Bulma es un framework gratuito de código abierto que proporciona componentes frontend listos para usar que se pueden combinar fácilmente para crear interfaces web receptivas.
 
 **ESLint**
+
 Herramienta de código abierto enfocada en el proceso de "lintig" para JavaScript, siendo la más predominante para la tarea de "limpiar" código JavaScript tanto en el servidor (NodeJS) como en el navegador.
 
 A través de nuestra aplicación podrás visualizar las distintas especies junto con información sobre ellas y podrás filtrar por los distintos parámetros:
