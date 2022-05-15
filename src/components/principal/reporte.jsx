@@ -120,7 +120,7 @@ const Reporte = () => {
                     </div>
                 </div>
                 <div className="control pull-">
-                <input type='submit' className="button is-link" value='Enviar Reporte'/>
+                <input type='submit' className="button is-primary" value='Enviar Reporte'/>
             </div>
             </div>
 
