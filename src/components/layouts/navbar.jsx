@@ -22,8 +22,8 @@ const Navbar = () => {
                 </div>
                 <div id="navbarMenuHeroA" className="navbar-menu">
                     <div className="navbar-end">
-                        <Link to={'/'} className={`navbar-item ${location.pathname === '/' ? 'is-active' : ''}`}>
-                            Inicio
+                        <Link to={'/add'} className={`navbar-item ${location.pathname === '/add' ? 'is-active' : ''}`}>
+                            Agregar Especie
                         </Link>
                         <span className={`navbar-item ${location.pathname === '/reporte' ? 'is-active' : ''}`} href="/contacto">
                             <a className="button is-primary is-inverted">

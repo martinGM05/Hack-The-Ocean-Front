@@ -1,5 +1,6 @@
 import { useEffect,useState } from "react";
 import axios from '../../config/axios';
+import NavBar from '../layouts/navbar';
 
 const addEspecies = () => {
 
@@ -69,55 +70,104 @@ const addEspecies = () => {
 
 
     return ( 
+        <>
+        <NavBar/>
+       
         <form
         onSubmit={handleSubmit}
+        className='container mx-auto box my-5'
         >
-            <input 
-            type="text"
-            onChange={handleChange}
-            name='nombre' placeholder='nombre'></input>
-            <input
-            type="text"
-            onChange={handleChange}
-            name='descripcion' placeholder='descripcion'></input>
-            <input
-            type="text"
-            onChange={handleChange}
-            name='img' placeholder='img'></input>
+            <div class="notification is-primary">
+                Ayunda a Launch X para que puedas agregar especies que se encuentren en peligro de extincion y asi poder ayudar a los cientificos a prevenir la extincion de especies y generar conciencia.
+            </div>
+            <div class="field">
+                <label class="label">Nombre</label>
+                <div class="control">
+                <input 
+                class="input"
+                    type="text"
+                    onChange={handleChange}
+                    name='nombre' placeholder='nombre'>
+                </input>
+                </div>
+            </div>
 
-            <input type="number"
-            onChange={handleChange}
-            name='problematica' placeholder='problematica'></input>
+            <div className="field">
+                <label className="label">Descripción</label>
+                <div className="control"/>
+                <input
+                    className='input'
+                    type="text"
+                    onChange={handleChange}
+                    name='descripcion' placeholder='descripcion'></input>
+            </div>
 
+            <div className='field'>
+                <label className='label'>Imagen</label>
+                <div className='control'>
+                    <input
+                        className='input'
+                        type='text'
+                        onChange={handleChange}
+                        name='img' placeholder='img'></input>
+                </div>
+            </div>
+            
+            <div className="field">
+                <label className="label">Problemática</label>
+                <div className="control">
+                    <input
+                        className='input'
+                        type="number"
+                        onChange={handleChange}
+                        name='problematica' placeholder='problematica'></input>
+                </div>
+            </div>
 
-            <select 
-            onChange={handleChange}
-            name='estado'>
-                {info.estados.map(estado => (
-                    <option value={estado._id}>{estado.nombre}</option>
-                ))}
-            </select>
+            <div className='field is-grouped is-justify-content-flex-end'>
+            <div className="control">
+                <div className="select">
+                    <select 
+                        onChange={handleChange}
+                        name='estado'>
+                            {info.estados.map(estado => (
+                                <option value={estado._id}>{estado.nombre}</option>
+                            ))}
+                    </select>
+                </div>
+            </div>
 
-            <select
-            onChange={handleChange}
-            name='habitad'>
-                {info.habitads.map(habitad => (
-                    <option value={habitad._id}>{habitad.nombre}</option>
-                ))}
-            </select>
+            <div className="control">
+                <div className="select">
+                    <select
+                        onChange={handleChange}
+                        name='habitad'>
+                            {info.habitads.map(habitad => (
+                                <option value={habitad._id}>{habitad.nombre}</option>
+                            ))}
+                    </select>
+                </div>
+            </div>
 
-            <select
-            onChange={handleChange}
-            name='tipo'>
-                {info.tipos.map(tipo => (
-                    <option value={tipo._id}>{tipo.nombre}</option>
-                ))}
-            </select>
+            <div class="control">
+                <div class="select">
+                    <select
+                        onChange={handleChange}
+                        name='tipo'>
+                            {info.tipos.map(tipo => (
+                                <option value={tipo._id}>{tipo.nombre}</option>
+                            ))}
+                    </select>
+                </div>
+            </div>
+            <input className='button is-primary is-pulled-right' type='submit'></input>
+            </div>    
 
-            <input type='submit'></input>
+            
 
 
         </form>
+        </>
      );
 }
  
