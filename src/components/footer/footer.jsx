@@ -1,20 +1,23 @@
 const Footer = () => {
 
-    return ( 
-        <footer className="footer">
-        <div className="content has-text-centered">
-          <p>
-            <strong>Protegiendo especies</strong> by <a href="https://jgthms.com">Launch X</a>. The source code is licensed
-            <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
-            is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
-          </p>
-          <p>
-            Hack The Ocean - Salvemos la Tierra
-          </p>
-          <img src="./../../../Assets/images/Wooper.jpeg" alt="" width="100" height="100" />
+  return (
+    <footer className="footer">
+      <div className="content has-text-centered">
+        <p>
+          <strong>Woopas al rescate</strong> por Launch X.
+        </p>
+        <p>
+          Una aplicación para ayudar a los animales que están en peligro de extinción
+        </p>
+        <div className="is-flex is-flex-direction-column">
+          <a href="https://twitter.com/carlogilmar">
+            <img src="https://i.ibb.co/SxJ9CdL/logo-hack-the-ocean.png" alt="Woopa por Carlo Gilmar" border="0" />
+          </a>
+          <span>Imágen por <a href="https://twitter.com/carlogilmar">Carlo Gilmar</a></span>
         </div>
-      </footer>
-     );
+      </div>
+    </footer>
+  );
 }
- 
+
 export default Footer;
