@@ -17,6 +17,18 @@ const EspeciesProvider = ({ children }) => {
     const [stateTipos, setStateTipos] = useReducer(EspeciesReducer, initalState)
     const [stateHabitats, setStateHabitats] = useReducer(EspeciesReducer, initalState)
     
+    const buscador = async (nombre,desde=0,limite=6) => {
+        try {
+            const resultado = await axios.get(`/buscador?nombre=${nombre}&desde=${desde}&limite=${limite}`)
+            dispatch({
+                type: 'OBTENER_ESPECIES',
+                payload: resultado.data
+            })
+        }
+        catch (error) {
+            console.log(error)
+        }
+    }
 
     const obtenerEspecies = async (desde=0,limite=6) => {
 
@@ -141,7 +153,8 @@ const EspeciesProvider = ({ children }) => {
                 obtenerHabitats,
                 habitats: stateHabitats.habitats,
                 totalHabitats: stateHabitats.total,
-                filtrarEspecies
+                filtrarEspecies,
+                buscador
             }}
         >
             {children}
