@@ -65,13 +65,14 @@ id7(Una Api de las especies)
 ```
  
 ## Instrucciones para uso
-Como el proyecto está desplegado, basta con ir al link [Wooper al rescate](https://calm-glacier-02bd19710.1.azurestaticapps.net)
- 
+Clona este repositorio 
+> git clone <urlRepo>
+
 Para instalar las dependencias con el repositorio solo corre el comando:
->npm install
+> npm install
  
 Ahora despliega la página de manera local
->npm run dev
+> npm run dev
  
 Listo, ahora puedes dirigirte a la dirección local para ver el proyecto.
 
