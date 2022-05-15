@@ -40,7 +40,10 @@ id8[[Ayudemoslas]]
 id9(Notificaremos a las autoridades y grupos de proteccion y preservacion de la vida salvaje)
 ```
  
- 
+### GitHub Actions & Azure
+![github actions](https://static.gunnarpeipman.com/wp-content/uploads/2020/05/azure-static-web-app.png)
+
+
 ## Cómo funciona el proyecto
  
 ### Cómo navego?
