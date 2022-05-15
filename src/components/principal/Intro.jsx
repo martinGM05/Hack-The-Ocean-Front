@@ -3,23 +3,21 @@ import NavBar from '../layouts/navbar'
 const Introduccion = () => {
     return (
         <>
-             <div className='pb-0'>
-                <section className="hero is-primary is-medium">
-                    <div className="hero-head">
-                        <NavBar />
+            <section className="hero is-primary is-medium">
+                <div className="hero-head">
+                    <NavBar />
+                </div>
+                <div className="hero-body">
+                    <div className="container has-text-centered">
+                        <p className="title">
+                            Se parte de nosotros
+                        </p>
+                        <p className="subtitle">
+                            Solo necesitas una cuenta para poder reportar un animal
+                        </p>
                     </div>
-                    <div className="hero-body">
-                        <div className="container has-text-centered">
-                            <p className="title">
-                                Title
-                            </p>
-                            <p className="subtitle">
-                                Subtitle
-                            </p>
-                        </div>
-                    </div>
-                </section>
-            </div>
+                </div>
+            </section>
         </>
     );
 }

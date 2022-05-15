@@ -1,13 +1,16 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
+
+    const location = useLocation();
+
     return (
         <nav className="hero is-primary is-medium navbar">
             <div className="container">
                 <div className="navbar-brand">
                     <Link to='/' href="#">
-                        <a className="navbar-item">
-                            <img src="https://bulma.io/images/bulma-type-white.png" alt="Logo" />
+                        <a className="navbar-item title is-8">
+                            Woopas al rescate
                         </a>
                     </Link>
                     <span className="navbar-burger" data-target="navbarMenuHeroA">
@@ -18,13 +21,13 @@ const Navbar = () => {
                 </div>
                 <div id="navbarMenuHeroA" className="navbar-menu">
                     <div className="navbar-end">
-                        <a className="navbar-item is-active">
+                        <Link to={'/'} className={`navbar-item ${location.pathname === '/' ? 'is-active' : ''}`}>
                             Inicio
-                        </a>
-                        <a className="navbar-item">
+                        </Link>
+                        <Link to={'/'} className={`navbar-item ${location.pathname === '/reportar' ? 'is-active' : ''}`}>
                             Sobre Nosotros
-                        </a>
-                        <span className="navbar-item">
+                        </Link>
+                        <span className={`navbar-item ${location.pathname === '/reporte' ? 'is-active' : ''}`} href="/contacto">
                             <a className="button is-primary is-inverted">
                                 <Link to='/reporte'>
                                     <strong>Quiero Reportar un animal</strong>
