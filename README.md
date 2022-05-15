@@ -5,7 +5,7 @@ Hack the Ocean es un hackathon con la iniciativa de implementar tecnologías de 
  
 ## Woopas al Rescate
 Este proyecto apunta a crear consciencia de las distintas especies con las que habitamos en el planeta, la situación en la que se encuentran debido al cambio climático, afectación de su hábitat, pérdida de sus fuentes de alimento y la constante expansión del territorio humano.
-Puedes vizualizar el proyecto aqui [Wooper al rescate](https://hacktheocean.azurewebsites.net/)
+Puedes vizualizar el proyecto aqui [Wooper al rescate](https://calm-glacier-02bd19710.1.azurestaticapps.net)
  
 ### Tecnologías utilizadas en el proyecto
  
@@ -20,17 +20,21 @@ Vite.js es una herramienta de desarrollo rápido para proyectos web modernos. Se
 **Bulma CSS**
  
 Bulma es un framework gratuito de código abierto que proporciona componentes frontend listos para usar que se pueden combinar fácilmente para crear interfaces web receptivas.
- 
+
+**ESLint**
+
+Herramienta de código abierto enfocada en el proceso de "lintig" para JavaScript, siendo la más predominante para la tarea de "limpiar" código JavaScript tanto en el servidor (NodeJS) como en el navegador.
+
 A través de nuestra aplicación podrás visualizar las distintas especies junto con información sobre ellas y podrás filtrar por los distintos parámetros:
  
 ```mermaid
 flowchart TB
-id1-->id2 & id7-->id3-->id5-->id4--Necesita ayuda-->id6-->id8--Que puedo hacer?-->id1
+id1-->id2 & id7-->id3-->id5-->id4--Necesita ayuda-->id6-->id8--Qué puedo hacer?-->id1
 id4--No se encuentra en problemas-->id1
 id8--Nuestra colaboración-->id9
  
 id1(Conoce a las especies)
-id2([Donde se encuentran])
+id2([Dónde se encuentran])
 id3((Encontré una de ellas))
 id4{Se encuentran en problemas?}
 id5{{Hago una aportación}}
@@ -46,7 +50,7 @@ id9(Notificaremos a las autoridades y grupos de proteccion y preservacion de la 
 
 ## Cómo funciona el proyecto
  
-### Cómo navego?
+### ¿Cómo navego?
 ```mermaid
 flowchart TB
 id1-->id6-->id2-->id3--Filtros-->id4--A través de un reporte-->id7
@@ -61,13 +65,21 @@ id7(Una Api de las especies)
 ```
  
 ## Instrucciones para uso
-Si el proyecto está desplegado basta con ir al link [Wooper al rescate](https://hacktheocean.azurewebsites.net/)
- 
+Clona este repositorio 
+> git clone <urlRepo>
+
 Para instalar las dependencias con el repositorio solo corre el comando:
->npm install
+> npm install
  
 Ahora despliega la página de manera local
->npm run dev
+> npm run dev
+ 
+El backend el cual se conecta con la página se encuentra en este [repositorio](https://github.com/martinGM05/backend-especiespeligro)
  
 Listo, ahora puedes dirigirte a la dirección local para ver el proyecto.
+
+# Demo
+![DEMO-Front](https://user-images.githubusercontent.com/63875704/168490887-948130f2-4879-431d-ad5f-51596a4fa24b.gif)
+
+
 
