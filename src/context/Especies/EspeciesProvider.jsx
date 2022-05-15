@@ -41,19 +41,36 @@ const EspeciesProvider = ({ children }) => {
         }
     }
 
-    const filtrarEspecies = async (estadoParam) => {
+    const filtrarEspecies = async (estadoParam, habitadParam, tipo) => {
         try {
-            const { data } = await axios.get(`/especie?desde=0&limite=100000`);
-            const especiesFiltradas = data.especies.filter(especie => especie.estado.map(estado => estado.nombre).includes(estadoParam))
-            // console.log('Estado original', state);
-            // console.log('Estado filtrado', result);
-            dispatch({
-                type: "FILTRAR_ESPECIES",
-                payload: {
-                    especies: especiesFiltradas,
-                    total: especiesFiltradas.length
-                }
-            })
+            if(habitadParam != ''){
+                const { data } = await axios.get(`especie?desde=0&limite=5&habitad=${habitadParam}`);
+                dispatch({
+                    type: "FILTRAR_ESPECIES",
+                    payload: {
+                        especies: data.especies,
+                        total: data.total
+                    }
+                })
+            }else if(tipo != ''){
+                const { data } = await axios.get(`especie?desde=0&limite=5&tipo=${tipo}`);
+                dispatch({
+                    type: "FILTRAR_ESPECIES",
+                    payload: {
+                        especies: data.especies,
+                        total: data.total
+                    }
+                })
+            }else if(estadoParam != ''){
+                const { data } = await axios.get(`especie?desde=0&limite=5&estado=${estadoParam}`);
+                dispatch({
+                    type: "FILTRAR_ESPECIES",
+                    payload: {
+                        especies: data.especies,
+                        total: data.total
+                    }
+                })
+            }
         } catch (error) {
             console.log(error);
         }

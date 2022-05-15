@@ -12,8 +12,8 @@ const Buscador = ({ setModal }) => {
     } = useContext(EspeciesContext);
 
     const [pagina, setPagina] = useState(1);
-    const [opcion, setOpcion] = useState('Todos');
     const [tipoLista, setTipoLista] = useState([]);
+    const [opt, setOpt] = useState('');
 
     useEffect(() => {
         obtenerEstados();
@@ -26,16 +26,24 @@ const Buscador = ({ setModal }) => {
             setTipoLista([])
         } else if (e.target.value === 'Estado') {
             setTipoLista(estados);
+            setOpt('estado');
         } else if (e.target.value === 'Tipo') {
             setTipoLista(tipos);
+            setOpt('tipo');
         } else if (e.target.value === 'Habitat') {
             setTipoLista(habitats);
+            setOpt('habitat');
         }
     }
 
     const handleFiltrar = (e) => {
-        alert(e.target.value)
-        filtrarEspecies(e.target.value);
+        if(opt === 'estado'){
+            filtrarEspecies(e.target.value, '', '');
+        }else if(opt === 'habitat'){
+            filtrarEspecies('', e.target.value, '');
+        }else if(opt === 'tipo'){
+            filtrarEspecies('', '', e.target.value);
+        }
     }
 
 
