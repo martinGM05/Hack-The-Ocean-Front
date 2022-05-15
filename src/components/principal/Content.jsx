@@ -8,13 +8,15 @@ const Content = () => {
     const {especies,total, obtenerEspecies} = useContext(EspeciesContext);
     const [pagina,setPagina] = useState(1);
 
-    const getEspecies = ()=>{
-        obtenerEspecies(pagina*6);
-    }
 
     useEffect(() => {
-        obtenerEspecies();
-    }, [])
+        if(pagina == 1){
+            obtenerEspecies();
+        }else{
+            obtenerEspecies((pagina-1) * 6);
+        }
+        
+    }, [pagina])
 
     if(!especies.length){
         return <p className="has-text-centered">No se encontraron especies</p>
@@ -40,10 +42,7 @@ const Content = () => {
             {
                 pagina != 1 ?
                 <button 
-                onClick={() =>{ 
-                    setPagina(pagina - 1)
-                    getEspecies()
-                }}
+                onClick={() => setPagina(pagina-1)}
             className="pagination-previous">Anterior</button>
                 : null
             }
@@ -51,10 +50,7 @@ const Content = () => {
             {
                 pagina*6 < total ?
                 <button
-                onClick={() => {
-                    setPagina(pagina + 1)
-                    getEspecies()
-                }}
+                onClick={() => setPagina(pagina + 1)}
                 className="pagination-next">Siguiente</button>
                 : null
 

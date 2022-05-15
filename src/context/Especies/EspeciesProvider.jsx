@@ -19,8 +19,14 @@ const EspeciesProvider = ({ children }) => {
     
 
     const obtenerEspecies = async (desde=0,limite=6) => {
+
+        console.log(desde)
+        console.log(limite);
+
         try {
-            const resultado = await axios.get(`/especie?desde=${desde}&limite=${limite}`);
+            const url = `/especie?desde=${desde}&limite=${limite}`
+            console.log(url)
+            const resultado = await axios.get(url);
 
             dispatch({
                 type: "OBTENER_ESPECIES",
