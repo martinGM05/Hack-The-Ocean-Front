@@ -74,6 +74,8 @@ Para instalar las dependencias con el repositorio solo corre el comando:
 Ahora despliega la página de manera local
 > npm run dev
  
+El backend el cual se conecta con la página se encuentra en este [repositorio](https://github.com/martinGM05/backend-especiespeligro)
+ 
 Listo, ahora puedes dirigirte a la dirección local para ver el proyecto.
 
 # Demo
