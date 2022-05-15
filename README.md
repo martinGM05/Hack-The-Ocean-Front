@@ -1,68 +1,70 @@
 # HACK THE OCEAN - LAUNCHX
-## Un proyecto de INNOVACCION VIRTUAL
-
-Hack the Ocean es un hackathon con la iniciativa de implementar tecnologias de Frontend y Backend para explorar distintas problematicas, pensar en soluciones e implementarlas de manera que los conocimientos adquiridos por los Explorers tengan un aterrizaje al terreno practico y exploren nuevas soluciones a partir de su creatividad, conocimiento y objetivos a travez del trabajo en equipo.
-
-## Woopas al Rescate 
-Este proyecto apunta a crear consciencia de las distintas especies con a las que habitamos en el planeta, la situacion enla que se encuentran debido al cambio climatico, afectacion de su habitad, perdida de sus fuentes de alimento y la constante expansion del territorio humano.
+## Un proyecto de INNOVACIÓN VIRTUAL
+ 
+Hack the Ocean es un hackathon con la iniciativa de implementar tecnologías de Frontend y Backend para explorar distintas problemáticas, pensar en soluciones e implementarlas de manera que los conocimientos adquiridos por los Explorers tengan un aterrizaje al terreno práctico y exploren nuevas soluciones a partir de su creatividad, conocimiento y objetivos a través del trabajo en equipo.
+ 
+## Woopas al Rescate
+Este proyecto apunta a crear consciencia de las distintas especies con las que habitamos en el planeta, la situación en la que se encuentran debido al cambio climático, afectación de su hábitat, pérdida de sus fuentes de alimento y la constante expansión del territorio humano.
 Puedes vizualizar el proyecto aqui [Wooper al rescate](https://hacktheocean.azurewebsites.net/)
-
-
-
-
-### Tecnologías utilizadas en este proyecto
-
-**Node.js**
-
-Node.js es un entorno de tiempo de ejecución de JavaScript de código abierto, multiplataforma y back-end que se ejecuta en el motor V8 y ejecuta código JavaScript fuera de un navegador web. Permita que los desarrolladores usen JavaScript para escribir herramientas de línea de comandos y para secuencias de comandos del lado del servidor, ejecutando scripts del lado del servidor para producir contenido dinámico de la página web antes de que la página se envíe al navegador web del usuario.
-
-**MongoDB**
-
-En lugar de guardar los datos en tablas, tal y como se hace en las bases de datos relacionales, MongoDB guarda estructuras de datos BSON (una especificación similar a JSON) con un esquema dinámico, haciendo que la integración de los datos en ciertas aplicaciones sea más fácil y rápida.
-
-**ExpressJs**
-
-Express es un marco de aplicación web Node.js mínimo y flexible que proporciona un sólido conjunto de características para aplicaciones web y móviles.
-
-### Modelado de la API
-
+ 
+### Tecnologías utilizadas en el proyecto
+ 
+**ReactJS**
+ 
+React es una biblioteca de JavaScript declarativa, eficiente y flexible para crear interfaces de usuario. Le permite componer interfaces de usuario complejas a partir de piezas de código pequeñas y aisladas llamadas "componentes".
+ 
+**ViteJs**
+ 
+Vite.js es una herramienta de desarrollo rápido para proyectos web modernos. Se centra en la velocidad y el rendimiento mediante la mejora de la experiencia de desarrollo. Vite utiliza importaciones nativas de ES del navegador para permitir el soporte para navegadores modernos sin un proceso de compilación.
+ 
+**Bulma CSS**
+ 
+Bulma es un framework gratuito de código abierto que proporciona componentes frontend listos para usar que se pueden combinar fácilmente para crear interfaces web receptivas.
+ 
+A través de nuestra aplicación podrás visualizar las distintas especies junto con información sobre ellas y podrás filtrar por los distintos parámetros:
+ 
 ```mermaid
-classDiagram 
-    class Especie
-      Especie <|-- Estado  
-      Especie <|-- Habitad  
-      Especie <|-- Tipo
-      Especie : +String nombre
-      Especie : +String descripcion
-      Especie : +String img
-      Especie : +String descripcion
-      Especie : +Int problematica
-      Especie : +Schema Tipo
-      Especie : +Schema Estado
-      Especie : +Schema Habitad
-        class Estado {
-            +String Estado
-        }
-        class Habitad {
-            +String Habitad
-        }
-        class Tipo {
-            +String Tipo
-        }
+flowchart TB
+id1-->id2 & id7-->id3-->id5-->id4--Necesita ayuda-->id6-->id8--Que puedo hacer?-->id1
+id4--No se encuentra en problemas-->id1
+id8--Nuestra colaboración-->id9
+ 
+id1(Conoce a las especies)
+id2([Donde se encuentran])
+id3((Encontré una de ellas))
+id4{Se encuentran en problemas?}
+id5{{Hago una aportación}}
+id6[(Almacenamos los datos para verificarlos)]
+id7([Averigua sobre su situación])
+id8[[Ayudemoslas]]
+id9(Notificaremos a las autoridades y grupos de proteccion y preservacion de la vida salvaje)
 ```
-### Un form padrisimo!
-
+ 
+ 
+## Cómo funciona el proyecto
+ 
+### Cómo navego?
 ```mermaid
-classDiagram
-    class Reporte
-    Reporte : +String Titulo
-    Reporte : +String Decripcion
-    Reporte : +Date Fecha
-    Reporte : +String Email
-    Reporte : +String Ubicacion
-    Reporte : +String Estado
-    Reporte : +Boolean Finalizado
-    Reporte : +Enviar Reporte()
+flowchart TB
+id1-->id6-->id2-->id3--Filtros-->id4--A través de un reporte-->id7
+id7--Juntos haremos crecer el proyecto-->id2
+id4-->id6
+id1(Mira la página)
+id2(Aprendes)
+id6(Está creciendo)
+id3(Qué te interesa?)
+id4(Aportas)
+id7(Una Api de las especies)
 ```
+ 
+## Instrucciones para uso
+Si el proyecto está desplegado basta con ir al link [Wooper al rescate](https://hacktheocean.azurewebsites.net/)
+ 
+Para instalar las dependencias con el repositorio solo corre el comando:
+>npm install
+ 
+Ahora despliega la página de manera local
+>npm run dev
+ 
+Listo, ahora puedes dirigirte a la dirección local para ver el proyecto.
 
-Recordar ejecutar ```npm install``` para reconstruir los modules de Node
