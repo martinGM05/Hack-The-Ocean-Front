@@ -2,9 +2,6 @@ import {Link} from 'react-router-dom';
 
 
 const Card = ({data}) => {
-
-    console.log(data);
-
     return ( 
         
         <div className="card" style={{'height':'20rem'}}>
