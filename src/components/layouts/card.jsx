@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 
 const Card = ({data}) => {
 
+    console.log(data);
 
     return ( 
         
@@ -21,7 +22,7 @@ const Card = ({data}) => {
                     </div>
                 <div className="media-right my-5">
                     <Link to = {`/animal/${data._id}`}
-                     className="title is-4">{data.nombre}</Link>
+                     className="title is-4">{data.nombre.substring(0,16)}</Link>
                 </div>
                 </div>
 
@@ -36,9 +37,9 @@ const Card = ({data}) => {
                 </p>
 
                 <footer className="card-footer">
-                    <a href="#" className="card-footer-item">{data.estado[0].nombre}</a>
+                    {/* <a href="#" className="card-footer-item">{data.estado[0].nombre}</a>
                     <a href="#" className="card-footer-item">{data.tipo[0].nombre}</a>
-                    <a href="#" className="card-footer-item">{data.habitad[0].nombre}</a>
+                    <a href="#" className="card-footer-item">{data.habitad[0].nombre}</a> */}
                 </footer>
                 </div>
         </div>
