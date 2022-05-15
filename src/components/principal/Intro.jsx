@@ -10,7 +10,7 @@ const Introduccion = () => {
                 <div className="hero-body">
                     <div className="container has-text-centered">
                         <p className="title">
-                            Launch X - Salvando al Ocenado
+                            Launch X - Salvando al Oceano
                         </p>
                         <p className="subtitle">
                             Una aplicación para ayudar a los animales que están en peligro de extinción
