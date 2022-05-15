@@ -29,7 +29,7 @@ A través de nuestra aplicación podrás visualizar las distintas especies junto
  
 ```mermaid
 flowchart TB
-id1-->id2 & id7-->id3-->id5-->id4--Necesita ayuda-->id6-->id8-->id10-->id1
+id1-->id2 & id7-->id3-->id5-->id4--Necesita ayuda-->id6-->id8-->Qué puedo hacer?-->id1
 id4--No se encuentra en problemas-->id1
 id8--Nuestra colaboración-->id9
  
@@ -41,7 +41,6 @@ id5{{Hago una aportación}}
 id6[(Almacenamos los datos para verificarlos)]
 id7([Averigua sobre su situación])
 id8[[Ayudemoslas]]
-id10[[¿Qué puedo hacer?]]
 id9(Notificaremos a las autoridades y grupos de proteccion y preservacion de la vida salvaje)
 ```
  
