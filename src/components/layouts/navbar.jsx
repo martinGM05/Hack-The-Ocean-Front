@@ -1,8 +1,15 @@
 import { Link, useLocation } from 'react-router-dom';
+import {useState} from 'react';
 
 const Navbar = () => {
 
     const location = useLocation();
+
+    const [isActive, setIsActive] = useState(false);
+
+    const handleClick = () => {
+        setIsActive(!isActive);
+    }
 
     return (
         <nav className="hero is-primary is-medium navbar">
@@ -13,14 +20,9 @@ const Navbar = () => {
                             Woopas al rescate
                         </a>
                     </Link>
-                    <span className="navbar-burger" data-target="navbarMenuHeroA">
-                        <span>
-                        </span>
-                        <span></span>
-                        <span></span>
-                    </span>
+                    
                 </div>
-                <div id="navbarMenuHeroA" className="navbar-menu">
+                <div id="navbarMenuHeroA" className="navbar-menu is-active">
                     <div className="navbar-end">
                         <Link to={'/add'} className={`navbar-item ${location.pathname === '/add' ? 'is-active' : ''}`}>
                             Agregar Especie
