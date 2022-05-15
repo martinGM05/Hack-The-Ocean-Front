@@ -1,8 +1,15 @@
 import { useEffect,useState } from "react";
 import axios from '../../config/axios';
 import NavBar from '../layouts/navbar';
+import 'react-toastify/dist/ReactToastify.css';
+import { toast, ToastContainer} from 'react-toastify';
 
 const addEspecies = () => {
+
+    const notify = (msg,type) => toast(msg,{
+        type,
+        autoClose: 2000,
+    });
 
     const [info,setInfo] = useState({
         estados: [],
@@ -31,11 +38,10 @@ const addEspecies = () => {
         e.preventDefault();
         const {nombre,descripcion,img,problematica,estado,tipo,habitad} = especie;
         if(nombre === '' || descripcion === '' || img === '' || problematica === '' || estado === '' || tipo === '' || habitad === ''){
-            alert('Todos los campos son obligatorios');
+            notify('Todos los campos son obligatorios','error');
             return;
         }
         const resultado = await axios.post('/especie',{nombre,descripcion,img,problematica,estado,tipo,habitad});
-        console.log(resultado);
         setEspecie({
             nombre: '',
             descripcion: '',
@@ -45,7 +51,7 @@ const addEspecies = () => {
             tipo: '',
             habitad: '',
         })
-        alert('Especie agregada');
+        notify('Especie agregada','success');
         e.target.reset();
     }
     
