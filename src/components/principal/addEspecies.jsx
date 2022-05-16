@@ -78,7 +78,7 @@ const addEspecies = () => {
         className='container mx-auto box my-5'
         >
             <div class="notification is-primary">
-                Ayunda a Launch X para que puedas agregar especies que se encuentren en peligro de extincion y asi poder ayudar a los cientificos a prevenir la extincion de especies y generar conciencia.
+                Ayuda a Launch X para que puedas agregar especies que se encuentren en peligro de extincion y asi poder ayudar a los cientificos a prevenir la extincion de especies y generar conciencia.
             </div>
             <div class="field">
                 <label class="label">Nombre</label>
